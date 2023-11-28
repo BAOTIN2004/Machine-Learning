@@ -1,0 +1,48 @@
+6 chương :
+	chương 1: nhập môn học máy
+ 	Chương 2: tổng quan về bộ công cụ hỗ trợ phân tích dữ liệu Anaconda
+	Chương 3: Trực quan hóa dữ liệu
+	chương 4; tiền xử lý dữ liệu
+	chương 5: hồi quy tuyến tính
+	chương 6: hồi quy logistic
+	chương 7: Mô hình phân lớp k lân cận và Naive Bayes
+	chương 8: Phương pháp đánh giá mô hình phân loại
+tài liệu điện tử:
+	scikit-learn
+
+Chương 1: 
+1.1 Giới thiệu về học máy
+    Machine learning is the field of study that gives computers the ability to learn without being explicily programmed ( Học máy là lĩnh vực nghiên cứu mang lại cho máy tính khả năng học hỏi mà không cần lập trình rõ ràng.) 
+											-Arthur samuel,1959
+    A computer program is said to learn from experience E with respect to some task T and some performance...
+
+	* Nhiệm vụ T (Task T)
+	 + Các nhiệm vụ trong ML thường được mô tả thông qua việc một hệ thống ML xử lí một điểm dữ liệu( data point) như thế nào.
+	 + Mỗi điểm dữ liệu bao gồm nhiều đặc trưng(feature) khác nhau, mỗi feature thường được biểu diễn dưới dạng một con số.
+	* Phép đánh giá P (Performance P)
+	 + Để kiểm tra hiệu năng của một thuật toán ML, chúng ta cần phải thiết kế các phép đánh giá có thể đo đạc được kết quả.
+	 + Dữ liệu sẽ được hia thành hai phần riêng biệt: tập huấn luyện ( training set) và tập kiểm thử (test set)
+		Tập huấn luyện sẽ được dùng để tìm các tham số mô hình
+		Tập kiểm thử được dùng để đánh giá năng lực của mô hình tìm được. 
+	* Kinh nghiệm E(Experience E)
+	 + Việc huấn luyện các mô hình ML có thể coi là việc cho chúng trải nghiệm trên các tập dữ liệu (data set) - chính là training set.
+	 + Các tập dữ liệu khác nhau sẽ cho các mô hình các trải nghiệm khác nhau.
+	 + Chất lượng của các tập dữ liệu này cũng ảnh hưởng tới hiệu năng của mô hình.
+     ML is an approach to learn complex patterns from existing data and use these patterns to make predictions on unseen data(ML là một cách tiếp cận để tìm hiểu các mẫu phức tạp từ dữ liệu hiện có và sử dụng các mẫu này để đưa ra dự đoán về dữ liệu chưa được nhìn thấy)
+	(1) Học(learn): Hệ thống có khả năng tự học hỏi, nó phải có thứ gì đó để học hỏi, hệ thống ML hc từ dữ liệu.
+	ví dụ: Nếu muốn xây dựng hệ thống ML để học các dự đoán giá thuê phòng trên Airbnb, bạn cần cung cấp tập douwx liệu trong đó mỗi đầu vào là một danh sách có các đặc điểm liên quan( diện tích , số phòng, khu vực lân cận, tiện nghi, xếp hạng của danh sách đó,...) và đầu ra liên quan là giá cho thuê của danh sách đó.
+	Sau khi học được, hệ thống ML này sẽ có thể dự đoán giá của một danh sách mới dựa trên các đặc điểm của nó.
+	(2) Mẫu phức tạp( Complex Patterns)
+	 Giải pháp Ml chỉ hữu ích khi có các mẫu để học.
+	   vd: Không sử dụng ML để dự đoán kết quả của việc đổ xúc xắc vì không có khuôn mẫu nào về cách tạo ra những kết quả này. Tuy nhiên, có thể sử dụng ML để dự đoán bệnh,...
+      	 Việc một mẫu có tồn tại thì tập dữ liệu hoặc thuật toán ML có sẵn có thể không đủ tốt
+	   vd: có thể có một xu hướng trong cách các dòng tweet của Elon Musk ảnh hưởng đến giá tiền điện tử.
+	 Hãy xem xét một trang web như Airbnb có rất nhiều danh sách nhà; mỗi danh sách đi kèm với một mã zip.
+	 Nếu muốn sắp xếp danh sách theo các tiểu bang mà chúng nằm ở đó, chúng ta sẽ ko cần hệ thống ML.
+	 Vì mẫu này rất đơn giản -mỗi mã zop tương ứng với một trạng thái đã biết- bạn chỉ cần sử dụng bảng tra cứu.
+1.2 Cách tiếp cận của học máy
+1.3 Ứng dụng của học máy
+1.4 Học máy và các ngành liên quan
+1.5 Phân loại học máy
+1.6 Các nguồn dữ liệu miễn phí cho học máy
+
