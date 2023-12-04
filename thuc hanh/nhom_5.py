@@ -259,3 +259,21 @@ def density_plot():
     plt.legend(title="Chú thích", labels=["Tổng Số bàn thắng"], title_fontsize=12, fontsize=12, loc="upper left")
     plt.show()
 
+def line_chart(data):
+# Lọc dữ liệu cho Cristiano Ronaldo
+    ronaldo_data = data[data['Player Names'] == 'Cristiano Ronaldo' ]
+# Nhóm dữ liệu theo năm và tính số trận và tổng số phút thi đấu
+    games_and_minutes_by_year = ronaldo_data.groupby('Year').agg({'Matches_Played': 'sum', 'Mins': 'sum'})
+# Tính số phút thi đấu trung bình mỗi trận
+    games_and_minutes_by_year['Average Minutes Per Game'] = games_and_minutes_by_year['Mins'] / games_and_minutes_by_year['Matches_Played']
+    plt.figure(figsize=(10, 6))
+    plt.plot(games_and_minutes_by_year.index, games_and_minutes_by_year['Average Minutes Per Game'], marker='o', linestyle='-', color='b')
+    plt.xlabel('Năm',fontsize=18)
+    plt.ylabel('Số phút',fontsize=18)
+    plt.title('Số phút thi đấu trung bình mỗi trận của Cristiano Ronaldo qua các năm',fontsize=22,fontweight='bold')
+    plt.xticks([year for year in games_and_minutes_by_year.index if isinstance(year, int)])
+    for year, value in zip(games_and_minutes_by_year.index, games_and_minutes_by_year['Average Minutes Per Game']):
+        plt.text(year, value, f'{value:.2f}', ha='right', va='bottom')
+        plt.yticks(np.arange(85, 96, 2))
+    plt.ylim(85, 96)
+    plt.show()
