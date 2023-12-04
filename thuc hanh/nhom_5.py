@@ -34,9 +34,7 @@ def bar_chart():
 
     plt.show()
 
-# Biểu đồ đường (Line Chart)
-def line_chart():
-    print("Chua lam")
+
 
 # Biểu đồ tròn (Pie Chart)
 def pie_chart():
