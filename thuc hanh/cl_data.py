@@ -70,3 +70,6 @@ df = df.drop('flashstorage', axis=1)
 # In ra danh sách các cột sau khi xóa
 print("\nCác cột sau khi xóa:")
 print(df.columns)
+
+# dữ liệu sau khi tiền xử lí 
+df.to_csv("./laptops_processed.csv", index=False)
